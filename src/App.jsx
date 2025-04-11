@@ -10,36 +10,32 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Container className=" bg-black">
-        <Row>
-          <Col>
-            <NavBar />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Milano />
-                    <Roma />
-                    <Firenze />
-                  </>
-                }
-              />
+      <Row className=" bg-black">
+        <Col>
+          <NavBar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Milano />
+                  <Roma />
+                  <Firenze />
+                </>
+              }
+            />
 
-              <Route path="/allweather" element={<AllWeather />} />
-              <Route
-                path="*"
-                element={
-                  <div className="text-light text-center">
-                    Work in progress..
-                  </div>
-                }
-              />
-            </Routes>
-            <Footer />
-          </Col>
-        </Row>
-      </Container>
+            <Route path="/allweather" element={<AllWeather />} />
+            <Route
+              path="*"
+              element={
+                <div className="text-light text-center">Work in progress..</div>
+              }
+            />
+          </Routes>
+          <Footer />
+        </Col>
+      </Row>
     </BrowserRouter>
   );
 }
